@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
-
-#git_source(:github) {|pizza-bot| "https://github.com/#{pizza-bot}" }
+# git_source(:github) {|pizza-bot| "https://github.com/#{pizza-bot}" }
 
 source 'https://rubygems.org'
 
-gem 'rubocop', require: false
+group :test do
+  gem 'rspec'
+  gem 'rubocop-rspec', require: false
+end
 
-gem 'rspec'
-
-gem 'rubocop-rspec', require: false
+group :test, :development do
+  gem 'rubocop', require: false
+end
