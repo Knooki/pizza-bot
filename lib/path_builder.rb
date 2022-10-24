@@ -3,8 +3,9 @@
 require_relative './pizza_bot'
 
 class PathBuilder
-  def initialize(pizza_bot)
-    @PizzaBot = pizza_bot
+  def initialize(field, goals)
+    @field = field
+    @goals = goals
   end
 
   def sort_by_closest
@@ -12,6 +13,6 @@ class PathBuilder
   end
 
   def call
-    puts 'Entered in Path Builder'
+    return "Result String"
   end
 end

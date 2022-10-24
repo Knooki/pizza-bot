@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-require_relative './lib/parser'
-require_relative './lib/path_builder'
+require_relative './lib/pizza_bot'
 
-parser = Parser.new(gets)
+pizza_bot = PizzaBot.new()
 
-path_builder = PathBuilder.new(parser.call)
-
-path_builder.call
+p pizza_bot.order_pizza(gets)
