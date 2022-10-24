@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative './pizza_bot'
-
 # 5x5 (1, 3)(4, 4)
 class Parser
   def initialize(string)
@@ -30,6 +28,6 @@ class Parser
       raise StandardError.new "goals can't repeat" if  goals.count(goal) > 1
     end
 
-    PizzaBot.new(field, goals)
+    [field, goals]
   end
 end
